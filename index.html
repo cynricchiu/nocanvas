@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>nocanvas</title>
+		<style type="text/css">
+			:root {
+				--dark: #032951;
+				--light: #019ed5;
+			}
+			* {
+				margin: 0 0;
+				padding: 0;
+			}
+			html {
+				height: 100vh;
+				width: 100vw;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				background-color: var(--dark);
+				padding: 20px;
+				overflow: hidden;
+			}
+			a {
+				width: 160px;
+				height: 30px;
+				margin-bottom: 20px;
+				padding-left: 10px;
+				line-height: 30px;
+				color: white;
+				border-radius: 4px;
+			}
+			a:hover {
+				background-color: var(--dark);
+				box-shadow: 0 0 10px 2px var(--light);
+				padding-left: 30px;
+				transition: ease-in 100ms;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// demo列表
+			const demoList = ['drawPoints', 'drawLines', 'drawTriangles', 'drawCube', 'test'];
+			const fragDoc = document.createDocumentFragment();
+			for (let i = 0; i < demoList.length; i++) {
+				const a = document.createElement('a');
+				a.href = `/demo/${demoList[i]}.html`;
+				a.target = `_blank`;
+				a.innerHTML = `${demoList[i]}`;
+				fragDoc.appendChild(a);
+			}
+			document.body.appendChild(fragDoc);
+		</script>
+	</body>
+</html>

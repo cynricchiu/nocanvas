@@ -1,0 +1,22 @@
+{
+	"name": "nocanvas",
+	"version": "1.0.0",
+	"description": "基于canvas的简单软渲染器",
+	"main": "nocanvas.js",
+	"author": "liuming",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"build-lib": "vite build --mode=lib",
+		"preview": "vite preview --port 8088"
+	},
+	"devDependencies": {
+		"@turf/turf": "^6.5.0",
+		"dat.gui": "^0.7.9",
+		"vite": "^3.1.8"
+	},
+	"dependencies": {
+		"terser": "^5.15.1"
+	}
+}
